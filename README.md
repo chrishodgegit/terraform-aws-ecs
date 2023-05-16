@@ -91,7 +91,7 @@ module "ecs" {
             logDriver = "awsfirelens"
             options = {
               Name                    = "firehose"
-              region                  = "eu-west-1"
+              region                  = "us-east-1"
               delivery_stream         = "my-stream"
               log-driver-buffer-limit = "2097152"
             }
@@ -114,7 +114,7 @@ module "ecs" {
 
       load_balancer = {
         service = {
-          target_group_arn = "arn:aws:elasticloadbalancing:eu-west-1:1234567890:targetgroup/bluegreentarget1/209a844cd01825a4"
+          target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:1234567890:targetgroup/bluegreentarget1/209a844cd01825a4"
           container_name   = "ecs-sample"
           container_port   = 80
         }

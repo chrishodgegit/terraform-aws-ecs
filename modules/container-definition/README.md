@@ -90,7 +90,7 @@ module "example_ecs_container_definition" {
     logDriver = "awsfirelens"
     options = {
       Name                    = "firehose"
-      region                  = "eu-west-1"
+      region                  = "us-east-1"
       delivery_stream         = "my-stream"
       log-driver-buffer-limit = "2097152"
     }
