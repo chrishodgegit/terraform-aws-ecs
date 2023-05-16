@@ -19,7 +19,7 @@ module "ecs_service" {
   source = "terraform-aws-modules/ecs/aws//modules/service"
 
   name        = "example"
-  cluster_arn = "arn:aws:ecs:us-west-2:123456789012:cluster/default"
+  cluster_arn = "arn:aws:ecs:us-east-1:123456789012:cluster/default"
 
   cpu    = 1024
   memory = 4096
@@ -31,7 +31,7 @@ module "ecs_service" {
       cpu       = 512
       memory    = 1024
       essential = true
-      image     = "906394416424.dkr.ecr.us-west-2.amazonaws.com/aws-for-fluent-bit:stable"
+      image     = "906394416424.dkr.ecr.us-east-1.amazonaws.com/aws-for-fluent-bit:stable"
       firelens_configuration = {
         type = "fluentbit"
       }

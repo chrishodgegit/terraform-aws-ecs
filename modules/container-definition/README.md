@@ -49,7 +49,7 @@ module "fluentbit_ecs_container_definition" {
   cpu       = 512
   memory    = 1024
   essential = true
-  image     = "906394416424.dkr.ecr.us-west-2.amazonaws.com/aws-for-fluent-bit:stable"
+  image     = "906394416424.dkr.ecr.us-east-1.amazonaws.com/aws-for-fluent-bit:stable"
   firelens_configuration = {
     type = "fluentbit"
   }
