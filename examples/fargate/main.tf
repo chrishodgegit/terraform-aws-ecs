@@ -5,7 +5,7 @@ provider "aws" {
 data "aws_availability_zones" "available" {}
 
 locals {
-  region = "us-east-1"
+  region = "eu-west-1"
   name   = "ex-${basename(path.cwd)}"
 
   vpc_cidr = "10.0.0.0/16"
@@ -80,7 +80,7 @@ module "ecs_service" {
       cpu       = 512
       memory    = 1024
       essential = true
-      image     = "public.ecr.aws/aws-containers/ecsdemo-frontend:776fd50"
+      image     = "docker.io/wordpress:php8.2-apache"
       port_mappings = [
         {
           name          = local.container_name
